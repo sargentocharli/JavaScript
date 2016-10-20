@@ -7,11 +7,28 @@
  */
 
 {
-	let ordenaTres=function() {
+	let pideNumeros = function() {
 
-		let num1=parseInt(prompt("Introduzca el primer número: "));
-		let num2=parseInt(prompt("Introduzca el segundo número: "));
-		let num3=parseInt(prompt("Introduzca el tercer número: "));
+	}
+	let ordenaTres=function() {
+		do {
+			var num1=parseInt(prompt("Introduzca el primer número: "));
+			if(isNaN(num1) || num1.length==0) {
+				console.log("Introduzca un número, por favor");
+			}
+		} while (isNaN(num1) || num1.length==0);
+		do {
+			var num2=parseInt(prompt("Introduzca el segundo número: "));
+			if(isNaN(num2) || num2.length==0) {
+				console.log("Introduzca un número, por favor");
+			}
+		} while (isNaN(num2) || num2.length==0);
+		do {
+			var num3=parseInt(prompt("Introduzca el tercer número: "));
+			if(isNaN(num3) || num3.length==0) {
+				console.log("Introduzca un número, por favor");
+			}
+		} while (isNaN(num3) || num3.length==0);
 
 		if(num1>num2 && num1>num3 && num2>num3){
 			console.log("Los numeros de mayor a menor son: " + num1 + " " + num2 +" " + num3);

@@ -8,21 +8,32 @@
 */
 
 {
-	var num = prompt("Introduzca un número: ");
-	var numero = num.split(".");
+	let invertirCadena = function(cadena) {
+	  let longitudCadena = cadena.length;
+	  let cadenaInvertida = "";
+	 
+	  while (longitudCadena>=0) {
+	    cadenaInvertida += cadena.charAt(longitudCadena);
+	    longitudCadena--;
+	  }
+	  return cadenaInvertida;
+	}
 
-	if(num=>0 && num<10){
-		var digitos = numero[1].length;
+	do {
+		var num = prompt("Introduzca un número entre 0 y 10");
+		if(isNaN(num) || num.length==0 || num<0 || num>10) {
+			console.log("Introduzca un número entre 0 y 10, por favor")
+		}
+	} while (isNaN(num) || num.length==0 || num<0 || num>10)
+	
+	var numero = num.split(".");	
 
-		if(numero.length-1==0) {
-			console.log("El número no tiene decimales");
-		}
-		else {
-			console.log("El numero "+numero+" tiene "+ digitos +" decimales");
-			console.log("El número invertido es: "+numero.reverse());
-		}
+	if(numero.length-1==0) {
+		console.log(numero+" no tiene decimales");
 	}
 	else {
-		console.log("El número no es válido");
+		var digitos = numero[1].length;
+		console.log("El numero "+numero+" tiene "+ digitos +" decimales");
+		console.log("El número al revés es "+invertirCadena(numero.toString()));
 	}
 }

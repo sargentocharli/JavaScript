@@ -23,10 +23,14 @@
 				if(respuesta!='s' && respuesta!='n')
             		console.log("Por favor, responda con \"s / n\"" );
 			}
+			else {
+				console.log("Por favor, responda con \"s / n\"" );
+			}
 		}while(respuesta!='s' && respuesta!='n');
 
-		if (respuesta==='s')
+		if (respuesta==='s') {
             return true;
+		}
         return false;
 	}
 
@@ -35,12 +39,12 @@
 		console.log(aleatorio);
 		
 		do {
-			let numero = prompt("Introduzca un número: ");
+			var numero = prompt("Introduzca un número");
 			console.log(numero);
-			if(!isNaN(numero) && numero%1===0 && numero>0 && numero<101) {
+			if(!isNaN(numero) && numero%1==0 && numero>0 && numero<101) {
 				
 
-				if(numero===aleatorio) {
+				if(numero==aleatorio) {
 					console.log("¡Has acertado el número, enhorabuena!");
 					return;
 				}
@@ -52,7 +56,7 @@
 				}
 			}
 			else {
-			console.log("Por favor, introduzca un número entero.");
+			console.log("Por favor, introduzca un número entero entre 1 y 100.");
 			}
 		}while(numero!==aleatorio);
 	}

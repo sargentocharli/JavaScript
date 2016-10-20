@@ -5,34 +5,29 @@
 	Versión: 1.0
  */
 { 
+	let esMultiplo = function(numero) {
+		if(numero%5==0) {
+			return true;
+		}
+		return false;
+	}
 
-var array=[];
-var multiplo=false;
+	for(let i=0;i<7;i++) {
+		do{
+			var numero = prompt("Introduzca un número");
 
-for(let i=0;i<7;i++) {
-	do{
-		var numero = prompt("Introduzca un número: ");
+			if(isNaN(numero) || numero.length==0) {
+				console.log("Error. No has introducido un número");
+			}
+			
 
-		if(isNaN(numero)) {
-			console.log("Error. No has introducido un número");
+		} while(isNaN(numero) || numero.length==0);
+		
+		if(esMultiplo(numero)) {
+		console.log(numero+" es múltiplo de 5");
 		}
 		else {
-			array[i]=numero;
-		}
-
-	}while(isNaN(numero));
-}
-
-for(let indice in array){
-	if(array[indice]%5==0)
-		multiplo=true;
-}
-
-if(multiplo) {
-	console.log("Se ha introducido un múltiplo de 5");
-}
-else {
-	console.log("No se ha introducido un múltiplo de 5");
-}
-
+			console.log(numero+" no es múltiplo de 5");
+		}				
+	}
 }

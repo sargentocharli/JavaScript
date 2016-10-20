@@ -9,8 +9,13 @@
 {
 	let numero=1;
 	let media=0;
-	for(var i=0;numero>=0;i++){
-		numero=parseInt(prompt("Introduzca un número: "));
+	for(var i=0;numero>=0;i++){		
+		do {
+			numero=parseInt(prompt("Introduzca un número"));
+			if(isNaN(numero) || numero.length==0) {
+				console.log("Introduzca un número, por favor")
+			}
+		} while(numero.length==0 || isNaN(numero));
 		if(numero>=0) {
 			media+=numero;
 		}

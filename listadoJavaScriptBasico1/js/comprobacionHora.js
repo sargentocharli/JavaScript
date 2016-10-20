@@ -14,15 +14,18 @@
 	let comprobarDatos = function (hora,minutos,segundos){
 		let flagError=false;
 
-		if(hora<0 || hora>23)
-			flagError=true;
+		if(hora<0 || hora>23) {
+			return true;
+		}
 
-		if(minutos<0 || minutos>59)
-			flagError=true;
+		if(minutos<0 || minutos>59) {
+			return true;
+		}
 
-		if(segundos<0 || segundos>59)
-			flagError=true;
-		return flagError;
+		if(segundos<0 || segundos>59) {
+			return true;
+		}
+		return false;
 	}
 
 	let error=comprobarDatos(hora,minutos,segundos);

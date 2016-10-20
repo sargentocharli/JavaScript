@@ -13,13 +13,14 @@
 	let comprobarDatos = function (numero){
 		let flagError=false;
 
-		if(numero<1)
-			flagError=true;
+		if(numero<1) {
+			return true;
+		}
 
-		if(isNaN(numero))
-			flagError=true;
-
-		return flagError;
+		if(isNaN(numero)) {
+			return true;
+		}
+			return false;		
 	}
 
 	let error=comprobarDatos(numero);

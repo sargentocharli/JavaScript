@@ -12,7 +12,7 @@
 
 	do{
 		numero=parseInt(prompt("Introduzca 0 o 1 (2 para salir) "));
-		if(numero<0 || numero>2) {
+		if(numero<0 || numero>2 || isNaN(numero) || numero.length==0) {
 			console.log("Solo puede introducir 0, 1 o 2.");
 		}
 
