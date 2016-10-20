@@ -23,8 +23,8 @@
 	if(!error) {
 		let unidades=function(numero){
 			switch(numero){
-  				case 0:
-  					return "CERO";
+  			case 0:
+  				return "CERO";
     			case 1: 
     				return "UNO";
     			case 2: 
@@ -61,8 +61,8 @@
 			switch(decenas){
 				case 1:
 					switch(unidad){
-						case 0: 
-							return "DIEZ";
+					case 0: 
+						return "DIEZ";
 		        		case 1: 
 		        			return "ONCE";
 		        		case 2: 
